@@ -39,7 +39,29 @@ header {
    text-align: center;
    overflow: hidden;
 }
-
+.typewriter{
+   overflow: hidden; /* Ensures the content is not revealed until the animation */
+   border-right: .15em solid #5172c1; /* The typwriter cursor */
+   white-space: nowrap; /* Keeps the content on a single line */
+   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+   letter-spacing: .15em; /* Adjust as needed */
+   font-size: 42px !important;
+   height: 60px;
+   animation: 
+     typing 2.5s steps(40, end),
+     blink-caret .75s step-end infinite;
+ }
+ /* The typing effect */
+@keyframes typing {
+   from { width: 0 }
+   to { width: 100% }
+ }
+ 
+ /* The typewriter cursor effect */
+ @keyframes blink-caret {
+   from, to { border-color: transparent }
+   50% { border-color: #5172c1; }
+ }
 /* vertically center banner section */
 header:before {
    content: '';
@@ -95,7 +117,7 @@ header .social li {
    padding: 0;
 }
 header .social li a { color: #fff; }
-header .social li a:hover { color: #11ABB0; }
+header .social li a:hover { color: #5172c1; }
 
 /* scrolldown link */
 header .scrolldown a {
@@ -117,7 +139,7 @@ header .scrolldown a {
    -o-transition: all .3s ease-in-out;
    transition: all .3s ease-in-out;
 }
-header .scrolldown a:hover { color: #11ABB0; }
+header .scrolldown a:hover { color: #5172c1; }
 
 /* primary navigation
 --------------------------------------------------------------------- */
@@ -179,7 +201,7 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #F06000; }
+ul#nav li.current a { color: #5172c1; }
 
 
 /* ------------------------------------------------------------------ */
@@ -251,7 +273,7 @@ ul#nav li.current a { color: #F06000; }
    letter-spacing: 1px;
 }
 #resume h1 span {
-   border-bottom: 3px solid #11ABB0;
+   border-bottom: 3px solid #5172c1;
    padding-bottom: 6px;
 }
 #resume h3 {   
@@ -268,7 +290,7 @@ ul#nav li.current a { color: #F06000; }
 .education, .work {
    margin-bottom: 48px;
    padding-bottom: 24px;
-   border-bottom: 1px solid #E8E8E8;
+   border-bottom: 1px solid #5172c1;
 }
 #resume .info {
    font: 17px/25px 'opensans-regular', sans-serif;
@@ -291,6 +313,11 @@ ul#nav li.current a { color: #F06000; }
    margin-right: 9%;
 }
 #resume .company-pic-2{
+   width: 80px;
+   vertical-align: middle;
+   margin-right: 3%;
+}
+#resume .company-pic-3{
    width: 80px;
    vertical-align: middle;
    margin-right: 3%;
@@ -318,7 +345,11 @@ ul#nav li.current a { color: #F06000; }
 
 #resume .skills-1, .skills-2, .skills-3, .skills-4, .skills-5, .skills-6, .skills-7, .skills-8, .skills-9, .skills-10, .skills-11, .skills-12{
    width: 100px;
-   height: 116px;
+   height: 100px;
+}
+#resume .skills-7{
+   width: 100px;
+   height: 100px;
 }
 /*----------------------------------------------*/
 /*	Skill Bars
@@ -680,7 +711,7 @@ call-to-action .button {
 #testimonials {
    background: #111111;
    position: relative;
-   min-height: 200px;
+   min-height: 320px;
    width: 100%;
    overflow: hidden;
 }
@@ -716,7 +747,7 @@ call-to-action .button {
 }
 #testimonials blockquote:before { content: none; }
 #testimonials blockquote p {
-   font-family: 'librebaskerville-italic', serif;
+   font-family: 'opensans-regular', sans-serif;
    padding: 0;
    font-size: 24px;
    line-height: 48px;
@@ -724,7 +755,7 @@ call-to-action .button {
 }
 #testimonials blockquote cite {
    display: block;
-   font-size: 12px;
+   font-size: 16px;
    font-style: normal;
    line-height: 18px;
    color: #fff;
@@ -1006,7 +1037,7 @@ footer .social-links li {
     margin: 0;
     padding: 0;
     margin-left: 42px;
-    color: #F06000;
+    color: #5172c1;
 }
 
 footer .social-links li:first-child { margin-left: 0; }
@@ -1037,5 +1068,5 @@ footer .social-links li:first-child { margin-left: 0; }
    line-height: 60px;
  	border-radius: 100%;
 }
-#go-top a:hover { background-color: #0F9095; }
+#go-top a:hover { background-color: #5172c1; }
 
